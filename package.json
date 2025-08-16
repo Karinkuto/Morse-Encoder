@@ -1,0 +1,38 @@
+{
+  "name": "morse-code-translator",
+  "version": "2.0.0",
+  "description": "A modern, beautiful web-based Morse Code Translator with audio playback and sleek UI",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . -p 3000",
+    "build": "echo 'No build step required - pure HTML/CSS/JS'"
+  },
+  "keywords": [
+    "morse-code",
+    "translator",
+    "web-app",
+    "audio",
+    "modern-ui",
+    "responsive",
+    "javascript",
+    "html5",
+    "css3"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/morse-code-translator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/morse-code-translator/issues"
+  },
+  "homepage": "https://github.com/yourusername/morse-code-translator#readme"
+}

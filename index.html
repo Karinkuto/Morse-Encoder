@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Translator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-broadcast-tower"></i>
+                <h1>Morse Code Translator</h1>
+            </div>
+            <p class="subtitle">Convert text to Morse code with audio playback</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="textInput">Enter your message:</label>
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="textInput" 
+                            placeholder="Type your message here..."
+                            rows="4"
+                        ></textarea>
+                        <button class="clear-btn" id="clearBtn" title="Clear text">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" id="translateBtn">
+                        <i class="fas fa-play"></i>
+                        Translate & Play
+                    </button>
+                    <button class="btn btn-secondary" id="stopBtn" disabled>
+                        <i class="fas fa-stop"></i>
+                        Stop Audio
+                    </button>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="morse-display">
+                    <h3>Morse Code Output</h3>
+                    <div class="morse-text" id="morseOutput">
+                        <span class="placeholder">Your Morse code will appear here...</span>
+                    </div>
+                    <button class="btn btn-outline" id="copyBtn" style="display: none;">
+                        <i class="fas fa-copy"></i>
+                        Copy to Clipboard
+                    </button>
+                </div>
+
+                <div class="morse-guide">
+                    <h3>Morse Code Reference</h3>
+                    <div class="guide-grid">
+                        <div class="guide-section">
+                            <h4>Letters</h4>
+                            <div class="code-pairs">
+                                <span>A: .-</span>
+                                <span>B: -...</span>
+                                <span>C: -.-.</span>
+                                <span>D: -..</span>
+                                <span>E: .</span>
+                                <span>F: ..-.</span>
+                                <span>G: --.</span>
+                                <span>H: ....</span>
+                                <span>I: ..</span>
+                                <span>J: .---</span>
+                                <span>K: -.-</span>
+                                <span>L: .-..</span>
+                                <span>M: --</span>
+                                <span>N: -.</span>
+                            </div>
+                        </div>
+                        <div class="guide-section">
+                            <h4>Numbers</h4>
+                            <div class="code-pairs">
+                                <span>1: .----</span>
+                                <span>2: ..---</span>
+                                <span>3: ...--</span>
+                                <span>4: ....-</span>
+                                <span>5: .....</span>
+                                <span>6: -....</span>
+                                <span>7: --...</span>
+                                <span>8: ---..</span>
+                                <span>9: ----.</span>
+                                <span>0: -----</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Morse Code Translator. Built with modern web technologies.</p>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
